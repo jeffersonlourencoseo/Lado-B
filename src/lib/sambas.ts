@@ -6,6 +6,7 @@ export interface Samba {
   compositores: string[];
   disco: string | null;
   ano: number | null;
+  letras?: string;
   slug: string;
 }
 
@@ -47,4 +48,5 @@ export const youtubeUrl = (s: Samba) =>
   encodeURIComponent(`${s.titulo} ${s.cantor ?? s.compositores[0]}`);
 
 export const letrasUrl = (s: Samba) =>
+  s.letras ??
   'https://www.letras.com/?q=' + encodeURIComponent(`${s.titulo} ${s.cantor ?? s.compositores[0]}`);
