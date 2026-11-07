@@ -7,6 +7,7 @@ export interface Samba {
   disco: string | null;
   ano: number | null;
   letras?: string;
+  letra?: string | null;
   slug: string;
 }
 
