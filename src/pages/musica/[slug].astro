@@ -55,22 +55,36 @@ const compositoresTexto = samba.compositores.join(', ');
     }
   </dl>
 
-  <div class="mt-10 flex flex-wrap gap-3">
-    <a
-      href={youtubeUrl(samba)}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="rounded-lg bg-gold px-5 py-3 font-medium text-ink hover:opacity-90"
-    >
-      Ouvir no YouTube
-    </a>
+  <section class="mt-10 rounded-xl border border-gold/30 bg-ink/40 p-6">
+    <h2 class="font-serif text-2xl text-gold">Letra da música</h2>
+    {
+      samba.letra ? (
+        <p class="mt-5 whitespace-pre-line text-base leading-8 text-cream">{samba.letra}</p>
+      ) : (
+        <p class="mt-4 text-cream/70">
+          A letra ainda não foi disponibilizada nesta página.
+          Estamos cadastrando letras autorizadas pelos titulares dos direitos autorais.
+        </p>
+      )
+    }
     <a
       href={letrasUrl(samba)}
       target="_blank"
       rel="noopener noreferrer"
-      class="rounded-lg border border-gold px-5 py-3 text-gold hover:bg-gold/10"
+      class="mt-5 inline-flex rounded-lg border border-gold px-5 py-3 text-gold hover:bg-gold/10"
     >
-      Ler a letra no Letras
+      Consultar letra no Letras
+    </a>
+  </section>
+
+  <div class="mt-6">
+    <a
+      href={youtubeUrl(samba)}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex rounded-lg bg-gold px-5 py-3 font-medium text-ink hover:opacity-90"
+    >
+      Ouvir no YouTube
     </a>
   </div>
 </Base>
