@@ -1,0 +1,100 @@
+[
+  {
+    "titulo": "Bamba de Berço",
+    "cantor": "Zeca Pagodinho",
+    "compositores": ["Mauro Diniz", "Sereno"],
+    "disco": null,
+    "ano": null
+  },
+  {
+    "titulo": "Pagode da Dona Ivone",
+    "cantor": "Mauro Diniz",
+    "compositores": ["Mauro Diniz", "Roque Ferreira"],
+    "disco": "Apoteose ao Samba",
+    "ano": 2003
+  },
+  {
+    "titulo": "Hino da Noite",
+    "cantor": "Arlindo Cruz e Sombrinha",
+    "compositores": ["Arlindo Cruz", "Acyr Marques", "Sombrinha"],
+    "disco": "Hoje Tem Samba",
+    "ano": 2002
+  },
+  {
+    "titulo": "Momento Infeliz",
+    "cantor": "Reinaldo",
+    "compositores": ["Moisés Sant'Ana", "Julinho"],
+    "disco": "Reinaldo e Seus Convidados – Pagode Pra Valer",
+    "ano": 1999
+  },
+  {
+    "titulo": "Favo de Mel",
+    "cantor": "Dudu Nobre",
+    "compositores": ["Dudu Nobre", "Moisés Santiago"],
+    "disco": "Dudu Nobre ao Vivo",
+    "ano": 2004
+  },
+  {
+    "titulo": "Quebro, Não Envergo",
+    "cantor": "Dudu Nobre",
+    "compositores": ["Dudu Nobre"],
+    "disco": null,
+    "ano": null
+  },
+  {
+    "titulo": "Barracão",
+    "cantor": "Zeca Pagodinho",
+    "compositores": ["Luiz Antônio", "Oldemar Magalhães"],
+    "disco": null,
+    "ano": null
+  },
+  {
+    "titulo": "Volta da Sorte",
+    "cantor": "Fundo de Quintal",
+    "compositores": ["Almir Guineto", "Luverci Ernesto"],
+    "disco": "Samba é no Fundo de Quintal (Vol. 01)",
+    "ano": 1980
+  },
+  {
+    "titulo": "Planta Imortal",
+    "cantor": "Roberto Ribeiro",
+    "compositores": ["Serafim Adriano"],
+    "disco": "Fala Meu Povo!",
+    "ano": 1980
+  },
+  {
+    "titulo": "Novo Endereço",
+    "cantor": "Jorge Aragão",
+    "compositores": ["Jorge Aragão", "Sombrinha"],
+    "disco": null,
+    "ano": null
+  },
+  {
+    "titulo": "Volta por Cima",
+    "cantor": null,
+    "compositores": ["Paulo Vanzolini"],
+    "disco": null,
+    "ano": null
+  },
+  {
+    "titulo": "Triste Amanhecer",
+    "cantor": "Pedrinho da Flor",
+    "compositores": ["Mauro Diniz", "Pedrinho da Flor"],
+    "disco": "Na Luz das Estrelas",
+    "ano": 1988
+  },
+  {
+    "titulo": "Se Eu For Falar de Tristeza",
+    "cantor": "Zeca Pagodinho",
+    "compositores": ["Beto Gago", "Zeca Pagodinho"],
+    "disco": "Zeca Pagodinho",
+    "ano": 1986
+  },
+  {
+    "titulo": "Sujeito Pacato",
+    "cantor": "Zeca Pagodinho",
+    "compositores": ["Serginho Meriti", "Claudio Guimarães"],
+    "disco": "Uma Prova de Amor",
+    "ano": 2008
+  }
+]

@@ -1,0 +1,37 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'Sambas Lado B',
+  description = 'Sambas muito bons que quase ninguém canta mais: o lado B do disco, com quem compôs cada um.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-ink font-sans text-cream antialiased">
+    <header class="border-b border-gold/30">
+      <div class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-3 px-5 py-5">
+        <a href="/" class="font-serif text-2xl tracking-wide text-gold">Sambas Lado B</a>
+        <nav class="flex gap-5 text-sm">
+          <a href="/" class="hover:text-gold">Sambas</a>
+          <a href="/compositores" class="hover:text-gold">Compositores</a>
+        </nav>
+      </div>
+    </header>
+    <main class="mx-auto max-w-4xl px-5 py-10">
+      <slot />
+    </main>
+    <footer class="border-t border-gold/30 py-8 text-center text-sm text-cream/60">
+      Sambas de disco que merecem ser cantados de novo. Créditos de composição conforme o Letras.
+    </footer>
+  </body>
+</html>

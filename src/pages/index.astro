@@ -1,0 +1,82 @@
+---
+import Base from '../layouts/Base.astro';
+import { sambas, slugify } from '../lib/sambas';
+---
+
+<Base>
+  <section class="mb-10">
+    <h1 class="font-serif text-4xl text-gold sm:text-5xl">O lado B do samba</h1>
+    <p class="mt-4 max-w-2xl text-lg text-cream/80">
+      Sambas fenomenais que não estouraram, ficaram escondidos no meio do disco e hoje quase ninguém
+      canta. Aqui, quem compôs vem primeiro.
+    </p>
+  </section>
+
+  <div class="mb-6">
+    <label for="busca" class="sr-only">Buscar</label>
+    <input
+      id="busca"
+      type="search"
+      placeholder="Buscar por samba, compositor ou cantor..."
+      class="w-full rounded-lg border border-gold/40 bg-card px-4 py-3 text-cream placeholder:text-cream/40 focus:border-gold focus:outline-none"
+    />
+    <p id="contagem" class="mt-2 text-sm text-cream/60">{sambas.length} sambas</p>
+  </div>
+
+  <ul id="lista" class="grid gap-4">
+    {
+      sambas.map((s) => (
+        <li
+          class="samba rounded-xl border border-gold/20 bg-card p-5"
+          data-busca={slugify(
+            [s.titulo, s.cantor ?? '', ...s.compositores, s.disco ?? ''].join(' '),
+          )}
+        >
+          <a href={`/musica/${s.slug}`} class="font-serif text-2xl hover:text-gold">
+            {s.titulo}
+          </a>
+          <p class="mt-2 text-sm text-cream/60">Compositores</p>
+          <p class="text-cream">
+            {s.compositores.map((c, i) => (
+              <>
+                <a href={`/compositor/${slugify(c)}`} class="text-gold hover:underline">
+                  {c}
+                </a>
+                {i < s.compositores.length - 1 && ' · '}
+              </>
+            ))}
+          </p>
+          {s.cantor && <p class="mt-2 text-sm text-cream/60">Gravação: {s.cantor}</p>}
+        </li>
+      ))
+    }
+  </ul>
+
+  <p id="vazio" class="mt-6 hidden text-cream/60">Nenhum samba encontrado.</p>
+</Base>
+
+<script>
+  const normalizar = (t: string) =>
+    t
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-');
+
+  const input = document.getElementById('busca') as HTMLInputElement;
+  const itens = Array.from(document.querySelectorAll<HTMLElement>('.samba'));
+  const contagem = document.getElementById('contagem')!;
+  const vazio = document.getElementById('vazio')!;
+
+  input.addEventListener('input', () => {
+    const termo = normalizar(input.value).replace(/^-+|-+$/g, '');
+    let visiveis = 0;
+    for (const el of itens) {
+      const mostra = !termo || (el.dataset.busca ?? '').includes(termo);
+      el.classList.toggle('hidden', !mostra);
+      if (mostra) visiveis++;
+    }
+    contagem.textContent = `${visiveis} ${visiveis === 1 ? 'samba' : 'sambas'}`;
+    vazio.classList.toggle('hidden', visiveis > 0);
+  });
+</script>

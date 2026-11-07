@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import { compositores } from '../lib/sambas';
+---
+
+<Base title="Compositores | Sambas Lado B">
+  <h1 class="font-serif text-4xl text-gold sm:text-5xl">Compositores</h1>
+  <p class="mt-3 max-w-2xl text-cream/80">
+    Quem fez essas obras. Os compositores com mais sambas na lista aparecem primeiro.
+  </p>
+
+  <ul class="mt-8 grid gap-3 sm:grid-cols-2">
+    {
+      compositores.map((c) => (
+        <li>
+          <a
+            href={`/compositor/${c.slug}`}
+            class="flex items-center justify-between rounded-xl border border-gold/20 bg-card px-5 py-4 hover:border-gold"
+          >
+            <span class="font-serif text-xl">{c.nome}</span>
+            <span class="text-sm text-gold">
+              {c.sambas.length} {c.sambas.length === 1 ? 'samba' : 'sambas'}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Base>

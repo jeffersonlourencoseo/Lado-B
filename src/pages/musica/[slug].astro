@@ -1,0 +1,76 @@
+---
+import Base from '../../layouts/Base.astro';
+import { sambas, slugify, youtubeUrl, letrasUrl } from '../../lib/sambas';
+
+export function getStaticPaths() {
+  return sambas.map((s) => ({ params: { slug: s.slug }, props: { samba: s } }));
+}
+
+const { samba } = Astro.props;
+const compositoresTexto = samba.compositores.join(', ');
+---
+
+<Base
+  title={`${samba.titulo} | Sambas Lado B`}
+  description={`${samba.titulo}, de ${compositoresTexto}.`}
+>
+  <a href="/" class="text-sm text-gold hover:underline">← Todos os sambas</a>
+
+  <h1 class="mt-4 font-serif text-4xl text-gold sm:text-5xl">{samba.titulo}</h1>
+
+  <dl class="mt-8 grid gap-6 sm:grid-cols-2">
+    <div>
+      <dt class="text-sm text-cream/60">Compositores</dt>
+      <dd class="mt-1 text-xl">
+        {
+          samba.compositores.map((c, i) => (
+            <>
+              <a href={`/compositor/${slugify(c)}`} class="text-gold hover:underline">
+                {c}
+              </a>
+              {i < samba.compositores.length - 1 && ' · '}
+            </>
+          ))
+        }
+      </dd>
+    </div>
+    {
+      samba.cantor && (
+        <div>
+          <dt class="text-sm text-cream/60">Gravação</dt>
+          <dd class="mt-1 text-xl">{samba.cantor}</dd>
+        </div>
+      )
+    }
+    {
+      samba.disco && (
+        <div>
+          <dt class="text-sm text-cream/60">Disco</dt>
+          <dd class="mt-1 text-xl">
+            {samba.disco}
+            {samba.ano && <span class="text-cream/60"> ({samba.ano})</span>}
+          </dd>
+        </div>
+      )
+    }
+  </dl>
+
+  <div class="mt-10 flex flex-wrap gap-3">
+    <a
+      href={youtubeUrl(samba)}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="rounded-lg bg-gold px-5 py-3 font-medium text-ink hover:opacity-90"
+    >
+      Ouvir no YouTube
+    </a>
+    <a
+      href={letrasUrl(samba)}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="rounded-lg border border-gold px-5 py-3 text-gold hover:bg-gold/10"
+    >
+      Ver no Letras
+    </a>
+  </div>
+</Base>
