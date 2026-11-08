@@ -55,6 +55,21 @@ const compositoresTexto = samba.compositores.join(', ');
     }
   </dl>
 
+  {
+    samba.youtube && (
+      <div class="mt-10 aspect-video w-full overflow-hidden rounded-xl border border-gold/30">
+        <iframe
+          class="h-full w-full"
+          src={`https://www.youtube-nocookie.com/embed/${samba.youtube}`}
+          title={`${samba.titulo} no YouTube`}
+          loading="lazy"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      </div>
+    )
+  }
+
   <section class="mt-10 rounded-xl border border-gold/30 bg-ink/40 p-6">
     <h2 class="font-serif text-2xl text-gold">Letra da música</h2>
     {
