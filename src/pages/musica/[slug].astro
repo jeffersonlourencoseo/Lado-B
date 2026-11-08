@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { sambas, slugify, youtubeUrl, letrasUrl } from '../../lib/sambas';
+import { sambas, slugify } from '../../lib/sambas';
 
 export function getStaticPaths() {
   return sambas.map((s) => ({ params: { slug: s.slug }, props: { samba: s } }));
@@ -82,24 +82,5 @@ const compositoresTexto = samba.compositores.join(', ');
         </p>
       )
     }
-    <a
-      href={letrasUrl(samba)}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="mt-5 inline-flex rounded-lg border border-gold px-5 py-3 text-gold hover:bg-gold/10"
-    >
-      Consultar letra no Letras
-    </a>
   </section>
-
-  <div class="mt-6">
-    <a
-      href={youtubeUrl(samba)}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex rounded-lg bg-gold px-5 py-3 font-medium text-ink hover:opacity-90"
-    >
-      Ouvir no YouTube
-    </a>
-  </div>
 </Base>
