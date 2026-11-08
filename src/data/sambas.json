@@ -212,5 +212,18 @@
     "ano": null,
     "letras": "https://www.letras.com.br/cartola/consideracao",
     "youtube": "N1wzn8Z_N1o"
+  },
+  {
+    "titulo": "Minhas Preces",
+    "cantor": "Grupo Deu Branco",
+    "compositores": [
+      "Luiz Carlos da Vila",
+      "Almir Guineto",
+      "Fred Camacho"
+    ],
+    "disco": null,
+    "ano": null,
+    "letras": "https://www.letras.com.br/grupo-deu-branco/minhas-preces",
+    "youtube": "rePllRZhYzA"
   }
 ]
