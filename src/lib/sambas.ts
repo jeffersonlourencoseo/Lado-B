@@ -4,8 +4,6 @@ export interface Samba {
   titulo: string;
   cantor: string | null;
   compositores: string[];
-  disco: string | null;
-  ano: number | null;
   letras?: string;
   youtube?: string;
   letra?: string | null;
