@@ -29,7 +29,7 @@ import { sambas, slugify } from '../lib/sambas';
         <li
           class="samba rounded-xl border border-gold/20 bg-card p-5"
           data-busca={slugify(
-            [s.titulo, s.cantor ?? '', ...s.compositores, s.disco ?? ''].join(' '),
+            [s.titulo, s.cantor ?? '', ...s.compositores].join(' '),
           )}
         >
           <a href={`/musica/${s.slug}`} class="font-serif text-2xl hover:text-gold">
