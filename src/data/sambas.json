@@ -36,7 +36,7 @@
       "album": "Apoteose ao Samba",
       "fonte": "https://dicionariompb.com.br/artista/mauro-diniz/",
       "fonteNome": "Dicionário Cravo Albin",
-      "observacao": "Álbum lançado em 2003; a faixa também está documentada no canal oficial do artista."
+      "observacao": "O Dicionário Cravo Albin registra a faixa no CD Apoteose ao samba, de 2003. Não foi localizado registro anterior nas fontes consultadas."
     }
   },
   {
@@ -90,12 +90,12 @@
     "youtube": "cd6hDUZFFjU",
     "gravacaoOriginal": {
       "status": "confirmada",
-      "artista": "Dudu Nobre, com participação de Péricles",
-      "ano": 2003,
-      "album": "Dudu Nobre Ao Vivo (lançado em 2004)",
-      "fonte": "https://immub.org/album/dudu-nobre-ao-vivo-1",
+      "artista": "Grupo Sem Compromisso",
+      "ano": 1997,
+      "album": "Felicidade Escondida",
+      "fonte": "https://immub.org/album/felicidade-escondida",
       "fonteNome": "IMMuB",
-      "observacao": "Gravação ao vivo realizada em dezembro de 2003."
+      "observacao": "O catálogo do IMMuB documenta esta gravação no álbum de 1997, anterior à versão ao vivo de Dudu Nobre com Péricles, gravada em dezembro de 2003."
     }
   },
   {
@@ -204,11 +204,11 @@
     "gravacaoOriginal": {
       "status": "confirmada",
       "artista": "Noite Ilustrada",
-      "ano": 1962,
-      "album": "Noite Ilustrada (LP lançado em 1963)",
-      "fonte": "https://dicionariompb.com.br/artista/noite-ilustrada/",
-      "fonteNome": "Dicionário Cravo Albin",
-      "observacao": "O Dicionário Cravo Albin registra a gravação em 1962; o LP que inclui a faixa foi lançado em 1963."
+      "ano": 1963,
+      "album": "Noite Ilustrada",
+      "fonte": "https://www.sescsp.org.br/editorial/entre-a-ciencia-e-a-cancao/",
+      "fonteNome": "Sesc São Paulo",
+      "observacao": "O Sesc São Paulo aponta 1963 como a primeira gravação. Algumas fontes biográficas divergem no ano; foi adotado o ano indicado pelo Sesc."
     }
   },
   {
@@ -301,9 +301,9 @@
       "artista": null,
       "ano": null,
       "album": null,
-      "fonte": "https://acervoportela.com.br/visualizacomp.php?id=8",
-      "fonteNome": "Acervo Musical do Consulado da Portela",
-      "observacao": "Há registro da faixa no álbum de Cristina Buarque e Grupo Terreiro Grande, de 2010, mas a fonte consultada não comprova que essa seja a primeira gravação. Não atribuir a primeira gravação a Candeia sem confirmação."
+      "fonte": "https://immub.org/album/terreiro-grande-e-cristina-buarque-cantam-candeia",
+      "fonteNome": "IMMuB",
+      "observacao": "Foi localizado um registro de Cristina Buarque e Grupo Terreiro Grande no tributo de 2010, mas isso não comprova que seja a primeira gravação. A gravação original permanece em apuração."
     }
   },
   {
@@ -452,11 +452,11 @@
     "gravacaoOriginal": {
       "status": "confirmada",
       "artista": "Cléber Augusto e Ferrugem",
-      "ano": null,
+      "ano": 2025,
       "album": "Single Falso Herói",
-      "fonte": "https://music.apple.com/us/album/falso-her%C3%B3i-single/1809258813",
-      "fonteNome": "Apple Music",
-      "observacao": "As plataformas consultadas divergem no ano exibido para o lançamento; por isso, o ano foi omitido."
+      "fonte": "https://www.youtube.com/watch?v=THXZeKP_NI8",
+      "fonteNome": "Canal oficial de Cléber Augusto / Warner Music Brasil",
+      "observacao": "O lançamento oficial consultado foi publicado em 30/04/2025. A gravação em destaque no site continua sendo a versão indicada pelo usuário."
     }
   }
 ]
