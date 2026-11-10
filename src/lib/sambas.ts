@@ -1,5 +1,15 @@
 import data from '../data/sambas.json';
 
+export interface GravacaoOriginal {
+  status: 'confirmada' | 'em_apuracao';
+  artista: string | null;
+  ano: number | null;
+  album: string | null;
+  fonte: string;
+  fonteNome: string;
+  observacao?: string;
+}
+
 export interface Samba {
   titulo: string;
   cantor: string | null;
@@ -7,13 +17,14 @@ export interface Samba {
   letras?: string;
   youtube?: string;
   letra?: string | null;
+  gravacaoOriginal: GravacaoOriginal;
   slug: string;
 }
 
 export function slugify(texto: string): string {
   return texto
     .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
+    .replace(/[\\u0300-\\u036f]/g, '')
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
