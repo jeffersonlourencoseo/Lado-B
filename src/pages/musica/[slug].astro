@@ -8,11 +8,12 @@ export function getStaticPaths() {
 
 const { samba } = Astro.props;
 const compositoresTexto = samba.compositores.join(', ');
+const original = samba.gravacaoOriginal;
 ---
 
 <Base
   title={`${samba.titulo} | Sambas Lado B`}
-  description={`${samba.titulo}, de ${compositoresTexto}.`}
+  description={`${samba.titulo}, de ${compositoresTexto}. Primeira gravação e versão em destaque.`}
 >
   <a href="/" class="text-sm text-gold hover:underline">← Todos os sambas</a>
 
@@ -20,71 +21,60 @@ const compositoresTexto = samba.compositores.join(', ');
 
   <dl class="mt-8 grid gap-6 sm:grid-cols-2">
     <div>
-      <dt class="text-sm text-cream/60">Compositores</dt>
+      <dt class="text-sm text-cream/60">Composição</dt>
       <dd class="mt-1 text-xl">
-        {
-          samba.compositores.map((c, i) => (
-            <>
-              <a href={`/compositor/${slugify(c)}`} class="text-gold hover:underline">
-                {c}
-              </a>
-              {i < samba.compositores.length - 1 && ' · '}
-            </>
-          ))
-        }
+        {samba.compositores.map((c, i) => (
+          <>
+            <a href={`/compositor/${slugify(c)}`} class="text-gold hover:underline">{c}</a>
+            {i < samba.compositores.length - 1 && ' · '}
+          </>
+        ))}
       </dd>
     </div>
-    {
-      samba.cantor && (
-        <div>
-          <dt class="text-sm text-cream/60">Gravação</dt>
-          <dd class="mt-1 text-xl">{samba.cantor}</dd>
-        </div>
-      )
-    }
+    <div>
+      <dt class="text-sm text-cream/60">Primeira gravação</dt>
+      {original.status === 'confirmada' && original.artista ? (
+        <>
+          <dd class="mt-1 text-xl">{original.artista}</dd>
+          {original.album && <dd class="mt-1 text-sm text-cream/70">{original.album}{original.ano ? ` · ${original.ano}` : ''}</dd>}
+        </>
+      ) : (
+        <dd class="mt-1 text-base text-cream/80">Em pesquisa — ainda não há confirmação suficiente para identificar a primeira gravação.</dd>
+      )}
+      {original.observacao && <dd class="mt-2 text-sm leading-6 text-cream/70">{original.observacao}</dd>}
+      <dd class="mt-2 text-sm"><a href={original.fonte} target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">Fonte: {original.fonteNome}</a></dd>
+    </div>
   </dl>
 
-  {
-    samba.youtube && (
-      <div class="mt-10 aspect-video w-full overflow-hidden rounded-xl border border-gold/30">
+  <section class="mt-10">
+    <h2 class="font-serif text-2xl text-gold">Gravação em destaque</h2>
+    <p class="mt-2 text-cream/70">Versão selecionada para esta página: <span class="text-cream">{samba.cantor ?? 'Artista não informado'}</span></p>
+    {samba.youtube && (
+      <div class="mt-5 aspect-video w-full overflow-hidden rounded-xl border border-gold/30">
         <iframe
           class="h-full w-full"
           src={`https://www.youtube-nocookie.com/embed/${samba.youtube}`}
-          title={`${samba.titulo} no YouTube`}
+          title={`${samba.titulo} — gravação em destaque de ${samba.cantor ?? 'artista'}`}
           loading="lazy"
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         />
       </div>
-    )
-  }
+    )}
+  </section>
 
   <section class="mt-10 rounded-xl border border-gold/30 bg-ink/40 p-6">
     <h2 class="font-serif text-2xl text-gold">Letra da música</h2>
-    {
-      samba.letra ? (
-        <p class="mt-5 whitespace-pre-line text-base leading-8 text-cream">{samba.letra}</p>
-      ) : (
-        <p class="mt-4 text-cream/70">
-          A letra ainda não foi disponibilizada nesta página.
-          Estamos cadastrando letras autorizadas pelos titulares dos direitos autorais.
-        </p>
-      )
-    }
+    {samba.letra ? (
+      <p class="mt-5 whitespace-pre-line text-base leading-8 text-cream">{samba.letra}</p>
+    ) : (
+      <p class="mt-4 text-cream/70">A letra ainda não foi disponibilizada nesta página. Estamos cadastrando letras autorizadas pelos titulares dos direitos autorais.</p>
+    )}
   </section>
 
-  {
-    !samba.youtube && (
-      <div class="mt-6">
-        <a
-          href={youtubeUrl(samba)}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex rounded-lg bg-gold px-5 py-3 font-medium text-ink hover:opacity-90"
-        >
-          Ouvir no YouTube
-        </a>
-      </div>
-    )
-  }
+  {!samba.youtube && (
+    <div class="mt-6">
+      <a href={youtubeUrl(samba)} target="_blank" rel="noopener noreferrer" class="inline-flex rounded-lg bg-gold px-5 py-3 font-medium text-ink hover:opacity-90">Ouvir no YouTube</a>
+    </div>
+  )}
 </Base>
