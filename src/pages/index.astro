@@ -36,7 +36,7 @@ import { sambas, slugify } from '../lib/sambas';
 </Base>
 
 <script>
-  const normalizar = (t: string) => t.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  const normalizar = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
   const input = document.getElementById('busca') as HTMLInputElement;
   const itens = Array.from(document.querySelectorAll<HTMLElement>('.samba'));
   const contagem = document.getElementById('contagem')!;
