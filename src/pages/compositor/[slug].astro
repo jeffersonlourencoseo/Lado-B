@@ -10,31 +10,21 @@ const { compositor } = Astro.props;
 const n = compositor.sambas.length;
 ---
 
-<Base
-  title={`${compositor.nome} | Sambas Lado B`}
-  description={`${n} ${n === 1 ? 'samba' : 'sambas'} de ${compositor.nome} no lado B.`}
->
+<Base title={`${compositor.nome} | Sambas Lado B`} description={`${n} ${n === 1 ? 'samba' : 'sambas'} de ${compositor.nome} no lado B.`}>
   <a href="/compositores" class="text-sm text-gold hover:underline">← Todos os compositores</a>
-
   <h1 class="mt-4 font-serif text-4xl text-gold sm:text-5xl">{compositor.nome}</h1>
   <p class="mt-3 text-cream/70">{n} {n === 1 ? 'samba' : 'sambas'} na lista</p>
-
   <ul class="mt-8 grid gap-4">
-    {
-      compositor.sambas.map((s) => {
-        const parceiros = s.compositores.filter((c) => c !== compositor.nome);
-        return (
-          <li class="rounded-xl border border-gold/20 bg-card p-5">
-            <a href={`/musica/${s.slug}`} class="font-serif text-2xl hover:text-gold">
-              {s.titulo}
-            </a>
-            {parceiros.length > 0 && (
-              <p class="mt-2 text-sm text-cream/70">Parceria com {parceiros.join(' e ')}</p>
-            )}
-            {s.cantor && <p class="text-sm text-cream/60">Gravação: {s.cantor}</p>}
-          </li>
-        );
-      })
-    }
+    {compositor.sambas.map((s) => {
+      const parceiros = s.compositores.filter((c) => c !== compositor.nome);
+      return (
+        <li class="rounded-xl border border-gold/20 bg-card p-5">
+          <a href={`/musica/${s.slug}`} class="font-serif text-2xl hover:text-gold">{s.titulo}</a>
+          {parceiros.length > 0 && <p class="mt-2 text-sm text-cream/70">Parceria com {parceiros.join(' e ')}</p>}
+          <p class="mt-2 text-sm text-cream/70">Primeira gravação: {s.gravacaoOriginal.status === 'confirmada' ? s.gravacaoOriginal.artista : 'em pesquisa'}</p>
+          {s.cantor && <p class="mt-1 text-sm text-cream/60">Vídeo em destaque: {s.cantor}</p>}
+        </li>
+      );
+    })}
   </ul>
 </Base>
