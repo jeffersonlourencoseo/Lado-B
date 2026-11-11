@@ -477,5 +477,24 @@
       "fonteNome": "Qobuz / créditos do álbum",
       "observacao": "Faixa lançada no álbum Palco Iluminado, de 1995. O registro oficial do fonograma no YouTube/Som Livre também indica 1995."
     }
+  },
+  {
+    "titulo": "Cena de Cinema",
+    "cantor": "Reinaldo",
+    "compositores": [
+      "Almir Guineto",
+      "Gilson de Souza"
+    ],
+    "letra": "Lindas cenas de amores\nAmbos um tanto confusos\nAo vivo e a cores\nCinema mudo\n\nComo se fosse um cinema\nFiz o papel principal\nEla super estar\nE o tema amor carnal\n\nA trilha sonora e a voz\nNinguém ouvia\nSó que Deus\nSe encontrava entre nós\n\nE nos dirigia\nApenas gestos de olhares\nSem palavras\nTal qual nosso divino Chaplin\nRepresentava\nA vida é um teatro de luz\n\nE cenário\nQue representamos\nE nem percebemos\nPeças e dramas o tempo inteiro\nEm todos os papéis que\nEu faço me dou por inteiro\nÁs vezes sou o palhaço\nMesmo sem picadeiro",
+    "youtube": "grVPAUR3Ua4",
+    "gravacaoOriginal": {
+      "status": "confirmada",
+      "artista": "Reinaldo",
+      "ano": 2000,
+      "album": "Pagode pra Valer – Vol. 2",
+      "fonte": "https://immub.org/album/pagode-pra-valer-vol-2-reinaldo-e-seus-convidados",
+      "fonteNome": "IMMuB",
+      "observacao": "Faixa 2 do álbum, com composição atribuída a Almir Guineto e Gilson de Souza; inclui citação de Smile."
+    }
   }
 ]
