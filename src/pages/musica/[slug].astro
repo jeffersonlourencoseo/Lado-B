@@ -49,7 +49,19 @@ const original = samba.gravacaoOriginal;
   <section class="mt-10">
     <h2 class="font-serif text-2xl text-gold">Gravação em destaque</h2>
     <p class="mt-2 text-cream/70">Versão selecionada para esta página: <span class="text-cream">{samba.cantor ?? 'Artista não informado'}</span></p>
-    {samba.youtube && (
+    {samba.videoLocal ? (
+      <div class="mt-5 aspect-video w-full overflow-hidden rounded-xl border border-gold/30 bg-black">
+        <video
+          class="h-full w-full"
+          src={samba.videoLocal}
+          controls
+          playsinline
+          preload="metadata"
+        >
+          Seu navegador não conseguiu reproduzir este vídeo.
+        </video>
+      </div>
+    ) : samba.youtube ? (
       <div class="mt-5 aspect-video w-full overflow-hidden rounded-xl border border-gold/30">
         <iframe
           class="h-full w-full"
@@ -60,7 +72,7 @@ const original = samba.gravacaoOriginal;
           allowfullscreen
         />
       </div>
-    )}
+    ) : null}
   </section>
 
   <section class="mt-10 rounded-xl border border-gold/30 bg-ink/40 p-6">
