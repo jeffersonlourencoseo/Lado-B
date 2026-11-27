@@ -16,6 +16,7 @@ export interface Samba {
   compositores: string[];
   letras?: string;
   youtube?: string;
+  videoLocal?: string;
   letra?: string | null;
   gravacaoOriginal: GravacaoOriginal;
   slug: string;
