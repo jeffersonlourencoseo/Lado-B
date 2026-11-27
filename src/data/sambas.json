@@ -496,5 +496,24 @@
       "fonteNome": "IMMuB",
       "observacao": "Faixa 2 do álbum, com composição atribuída a Almir Guineto e Gilson de Souza; inclui citação de Smile."
     }
+  },
+  {
+    "titulo": "A Ponte",
+    "cantor": "Zeca Pagodinho",
+    "compositores": [
+      "Paulo César Pinheiro",
+      "Elton Medeiros"
+    ],
+    "letra": "Chora\nPõe o coração na mesa\nChora\nTua secular tristeza\nTira    o teu coração da lama\nE chora a dor santa e a dor profana\nQue deus protege a quem chora\nPor toda tristeza humana\nO homem é sempre só\nO fim é sempre o pó\nNinguém foge do nó\nQue um dia a vida faz\nPor isso chora em paz\nQue a lágrima que cai\nÉ a ponte entre mais nada\nE outra vida mais\nE Deus protege a quem chora...",
+    "youtube": "Efzvxwa2bDg",
+    "gravacaoOriginal": {
+      "status": "confirmada",
+      "artista": "Zeca Pagodinho",
+      "ano": 2000,
+      "album": "Água da Minha Sede",
+      "fonte": "https://www.qobuz.com/br-pt/album/agua-da-minha-sede-zeca-pagodinho/0073145429602",
+      "fonteNome": "Qobuz / créditos do álbum e fonograma",
+      "observacao": "A faixa consta no álbum Água da Minha Sede, lançado pela Universal Music em 2000. O canal oficial da Universal no YouTube identifica o fonograma como ℗ 2000."
+    }
   }
 ]
