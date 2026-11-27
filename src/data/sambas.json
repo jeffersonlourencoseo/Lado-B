@@ -515,5 +515,24 @@
       "fonteNome": "Qobuz / créditos do álbum e fonograma",
       "observacao": "A faixa consta no álbum Água da Minha Sede, lançado pela Universal Music em 2000. O canal oficial da Universal no YouTube identifica o fonograma como ℗ 2000."
     }
+  },
+  {
+    "titulo": "O Nó da Gravata",
+    "cantor": "Grupo Fundo de Quintal",
+    "compositores": [
+      "Márcia Martins",
+      "Carlos Colla"
+    ],
+    "letra": "Pode ser que eu não tenha te amado direito\nMas se a gente encarar do meu jeito\nVocê vai perceber que estou certo afinal\nMeu amor por você é uma carta marcada\nVocê sabe que ganha a parada\nAbusando de mim e pagando geral\n\nPode ser que eu esqueça presentes e datas\nE que eu afroxe este nó da gravata\nOu que pare na roda de amigos num bar\nPode ser mas o resto é uma rede de intrigas\nDesta gente que quer nossa briga\nE só pensa em nos separar\n\nSe você tá me querendo\nMe chama que eu vou esquece\nO pior já passou\nMe abraça e me fala de amor perdoa\nEu não posso mais ficar desse jeito\nQue estou sozinho e carente de amor\nQue quero é ficar com você na boa",
+    "youtube": "0eqofv9NCSo",
+    "gravacaoOriginal": {
+      "status": "confirmada",
+      "artista": "Grupo Fundo de Quintal",
+      "ano": 1994,
+      "album": "Carta Musicada",
+      "fonte": "https://immub.org/album/carta-musicada",
+      "fonteNome": "IMMuB",
+      "observacao": "A faixa aparece como terceira música do álbum Carta Musicada, lançado pela RGE em 1994."
+    }
   }
 ]
